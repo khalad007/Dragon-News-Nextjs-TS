@@ -12,12 +12,12 @@ const CategoryList = async () => {
     console.log(allCategories)
     return (
         <div>
-            <h1>Categories </h1>
+            <h1 className="text-2xl font-semibold mt-5">Categories </h1>
 
             <div className="my-6">
                 {
                     allCategories.map((category: Category) => (
-                        <Link href={category.title}>
+                        <Link href={`/categories/news?category=${category.title.toLocaleLowerCase()}`}>
                             <button key={category.id} className="btn btn-outline btn-wide my-3">
                                 {category.title}
                             </button>

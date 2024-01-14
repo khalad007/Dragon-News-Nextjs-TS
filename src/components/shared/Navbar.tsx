@@ -8,7 +8,7 @@ const Navbar = () => {
     const NavLink = <>
         <li><Link href="/">Home</Link></li>
         <li><Link href="/pages">Pages</Link></li>
-        <li><Link href="/categories/news">Category</Link></li>
+        <li><Link href="/categories/news?category=all-news">Category</Link></li>
         <li><Link href="/news">News</Link></li>
         <li><Link href="/about">About</Link></li>
         <li><Link href="/contact">Contact</Link></li>
