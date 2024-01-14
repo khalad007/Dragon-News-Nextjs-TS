@@ -1,15 +1,21 @@
 import Link from "next/link";
-
+import logo from "@/assets/logo.png"
+import Image from "next/image";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
 
     const NavLink = <>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/menu">Our Menu</Link></li>
+        <li><Link href="/pages">Pages</Link></li>
+        <li><Link href="/category">Category</Link></li>
+        <li><Link href="/news">News</Link></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-base-100">
+       
+            <div className="navbar bg-black text-white rounded">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,18 +25,22 @@ const Navbar = () => {
                             {NavLink}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Image src={logo} alt="Logo" height={100} width={100} />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                       {NavLink}
+                        {NavLink}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end gap-x-4">
+                    
+                        <FaFacebook></FaFacebook>
+                        <FaTwitter/>
+                        <FaInstagram/>
+                    
                 </div>
             </div>
-        </div>
+        
     );
 };
 
