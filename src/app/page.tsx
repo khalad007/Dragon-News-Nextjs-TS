@@ -1,4 +1,5 @@
 import LatestNews from "@/components/ui/LatestNews/LatestNews";
+import Sidebar from "@/components/ui/Sidebar/Sidebar";
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
         <LatestNews></LatestNews>
       </div>
       <div>
-        side bar
+        <Sidebar></Sidebar>
       </div>
 
     </div>
